@@ -49,6 +49,7 @@ def preprocess_data(traffic: pd.DataFrame) -> pd.DataFrame:
                             "Intermittent.Semaphore": "intermittent_semaphore",
                             "Slowness.in.traffic....": "slowness_in_traffic"
                         })
+    
     traffic["hour_coded"] = change_to_category(traffic["hour_coded"])
     traffic["vehicle_excess"] = change_to_category(traffic["vehicle_excess"])
     traffic["freight_occurrence"] = change_to_category(traffic["freight_occurrence"])
