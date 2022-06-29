@@ -12,3 +12,4 @@ pytest-mock>=1.7.1, <2.0
 pytest~=6.2
 matplotlib==3.5.2
 seaborn
+sklearn

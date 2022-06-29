@@ -12,3 +12,9 @@ preprocessed_traffic:
   filepath: data/02_intermediate/preprocessed_traffic.pkl
 
 # Aqui eu mudei esse output para um arquivo picke pois assim as mudanças de tipo de variável no dataset se mantém conservadas, coisa que não aconteceria caso tivesse salvo em csv
+
+# Auxiliary object
+
+label_encoder:
+  type: pickle.PickleDataSet
+  filepath: data/05_model_input/label_encoder.pickle

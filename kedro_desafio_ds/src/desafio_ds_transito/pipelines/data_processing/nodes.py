@@ -7,9 +7,9 @@ import pandas as pd
 def change_names_module(df, col_names):
     df.rename(columns = col_names, inplace=True)
 
-def change_to_category(df):
-    df = df.astype('category')
-    return df
+# def change_to_category(df):
+#     df = df.astype('category')
+#     return df
 
 def parse_percentage(df):
     df = df.div(100)
@@ -24,7 +24,7 @@ def preprocess_data(traffic: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Preprocessed data with:
             - All column names changed;
-            - The right column types converted into category types;
+            - 
             - `slowness_in_traffic` variable converted into percentage without "%";
 
     """
@@ -50,11 +50,11 @@ def preprocess_data(traffic: pd.DataFrame) -> pd.DataFrame:
                             "Slowness.in.traffic....": "slowness_in_traffic"
                         })
     
-    traffic["hour_coded"] = change_to_category(traffic["hour_coded"])
-    traffic["vehicle_excess"] = change_to_category(traffic["vehicle_excess"])
-    traffic["freight_occurrence"] = change_to_category(traffic["freight_occurrence"])
-    traffic["dangerous_freight_incident"] = change_to_category(traffic["dangerous_freight_incident"])
-    traffic["fire"] = change_to_category(traffic["fire"])
+    # traffic["hour_coded"] = change_to_category(traffic["hour_coded"])
+    # traffic["vehicle_excess"] = change_to_category(traffic["vehicle_excess"])
+    # traffic["freight_occurrence"] = change_to_category(traffic["freight_occurrence"])
+    # traffic["dangerous_freight_incident"] = change_to_category(traffic["dangerous_freight_incident"])
+    # traffic["fire"] = change_to_category(traffic["fire"])
 
     traffic["slowness_in_traffic"] = parse_percentage(traffic["slowness_in_traffic"])
 
