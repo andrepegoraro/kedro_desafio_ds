@@ -15,6 +15,10 @@ encoded_traffic_dataset:
   type: pickle.PickleDataSet
   filepath: data/02_intermediate/encoded_traffic.pkl
 
+model_regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pickle
+
 # Aqui eu mudei esse output para um arquivo picke pois assim as mudanças de tipo de variável no dataset se mantém conservadas, coisa que não aconteceria caso tivesse salvo em csv
 
 # Auxiliary object
