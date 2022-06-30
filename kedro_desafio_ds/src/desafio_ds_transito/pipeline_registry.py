@@ -17,5 +17,6 @@ def register_pipelines() -> Dict[str, Pipeline]:
 
     return {"dp": data_processing_pipeline,
             "de": data_engineering_pipeline,
+            "prepare_and_engineer": (data_processing_pipeline+data_engineering_pipeline),
             "__default__": data_processing_pipeline
     }
