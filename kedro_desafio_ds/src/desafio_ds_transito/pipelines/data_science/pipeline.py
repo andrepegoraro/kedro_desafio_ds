@@ -17,7 +17,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         node(
             func = fit_model,
             inputs = ['X_train', 'X_test', 'y_train', 'y_test'],
-            outputs = "model_ regressor",
+            outputs = "model_regressor",
             name = "fit_model"
         )
     ])
